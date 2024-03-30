@@ -1,0 +1,133 @@
+font-face {
+  font-family: "Cabinet Grotesk";
+  src: url("../../vendor/fonts/CabinetGrotesk-Bold.otf") format("opentype");
+}
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0.5s, opacity 0.5s linear;
+}
+.modal__opened {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.modal__legend {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: "Cabinet Grotesk";
+  padding-bottom: 12px;
+}
+
+.modal__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: "Cabinet Grotesk";
+  margin: 0;
+  padding-bottom: 24px;
+}
+
+.modal__content {
+  margin: auto;
+  background-color: #fff;
+  padding: 28px 28px 28px 36px;
+  border-radius: 20px;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 496px;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.modal__input {
+  border-width: 0 0 1px;
+  padding: 0 0 4px;
+  width: 100%;
+}
+
+.modal__input::placeholder {
+  width: 440px;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.modal__radio-buttons {
+  flex-direction: row;
+  accent-color: black;
+  color: rgba(0, 0, 0, 0.5);
+  margin-right: 50px;
+}
+
+.modal__radio-buttons:focus-within {
+  color: rgba(0, 0, 0);
+}
+
+.modal__close {
+  background-image: url(../../assets/Close.svg);
+  position: absolute;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: cover;
+  width: 16px;
+  height: 16px;
+  border: 0;
+  padding: 0;
+  top: 20px;
+  right: 28px;
+}
+
+.modal__close:hover {
+  cursor: pointer;
+}
+.modal__submit {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: "Cabinet Grotesk";
+  color: #fff;
+  background-color: #0000004d;
+  padding: 8px 16px 8px 16px;
+  border-radius: 4px;
+  width: 124px;
+  border: 0;
+  margin-top: 8px;
+}
+
+.modal__submit:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal__label {
+  padding-bottom: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  font-family: "Cabinet Grotesk";
+}
+input[type="radio"] {
+  margin-right: 10px;
+}
