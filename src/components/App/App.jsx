@@ -50,6 +50,7 @@ function App() {
         buttonText="Add garment"
         activeModal={activeModal}
         onClose={closeActiveModal}
+        isOpen={activeModal === "add-garment"}
       >
         <label htmlFor="name" className="modal__label">
           Name
@@ -72,7 +73,12 @@ function App() {
         <fieldset className="modal__fieldset modal__ratio-buttons">
           <legend className="modal__legend">Select the weather type</legend>
           <label htmlFor="Hot" className="modal__label modal__label_type_radio">
-            <input id="Hot" type="radio" className=" modal__input_type_radio" />
+            <input
+              id="Hot"
+              type="radio"
+              name="weather-type"
+              className=" modal__input_type_radio"
+            />
             Hot
           </label>
           <label
@@ -82,6 +88,7 @@ function App() {
             <input
               id="Warm"
               type="radio"
+              name="weather-type"
               className=" modal__input_type_radio"
             />
             Warm
@@ -90,15 +97,20 @@ function App() {
             htmlFor="Cold"
             className="modal__label modal__label_type_radio"
           >
-            <input id="Cold" type="radio" className="modal__input_type_radio" />
+            <input
+              id="Cold"
+              type="radio"
+              name="weather-type"
+              className="modal__input_type_radio"
+            />
             Cold
           </label>
         </fieldset>
       </ModalWithForm>
       <ItemModal
-        activeModal={activeModal}
         card={selectedCard}
         onClose={closeActiveModal}
+        isOpen={activeModal === "preview"}
       />
     </div>
   );
