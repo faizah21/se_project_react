@@ -1,0 +1,4 @@
+.profile__sidebar {
+  display: flex;
+  gap: 100px;
+}
