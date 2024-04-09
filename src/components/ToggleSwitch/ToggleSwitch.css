@@ -12,36 +12,51 @@
 
 .switch__slider {
   border-radius: 20px;
-  width: 30px;
-  height: 30px;
-  background-color: black;
+  width: 28px;
+  height: 28px;
+  background-color: rgba(0, 0, 0);
   color: white;
   text-align: center;
   cursor: pointer;
   position: absolute;
 }
+
 .switch__slider-F {
+  top: 0px;
   left: 28px;
-  /* top: 3px; */
-}
-.switch__slider-C {
-  /* top: 3px;
-  left: 5px; */
-}
-.switch__temp-C {
   position: absolute;
-  top: -9px;
-  left: 11px;
-  color: white;
 }
+
+.switch__slider-C {
+  top: 0px;
+  left: 1px;
+  position: absolute;
+}
+
 .switch__temp-F {
   position: absolute;
-  top: -9px;
-  left: 38px;
+  top: 7px;
+  left: 40px;
   color: white;
+  font-family: "CabinetGrotesk";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.36px;
+  margin: 0;
+}
+
+.switch__temp-C {
+  position: absolute;
+  top: 7px;
+  left: 10px;
+  color: white;
+  font-family: "CabinetGrotesk";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.36px;
+  margin: 0;
 }
 
 .switch__active {
   color: white;
-  font-size: 16px;
 }

@@ -60,6 +60,21 @@ function App() {
     if (currentTemperatureUnit === "F") setCurrentTemperatureUnit("C");
   };
 
+  const handleDeleteCard = (card) => {
+    console.log(card);
+    api
+      .deleteClothingItem(card._id)
+      .then(() => {
+        setClothingItems((cards) =>
+          cards.filter((deleteCard) => deleteCard._id !== card._id)
+        );
+        closeActiveModal();
+      })
+      .catch((res) => {
+        console.log(`Error: ${res}`);
+      });
+  };
+
   useEffect(() => {
     getWeather(coordinates, APIKey)
       .then((data) => {
@@ -77,6 +92,8 @@ function App() {
       })
       .catch(console.error);
   }, []);
+
+ 
 
   console.log(currentTemperatureUnit);
   return (
@@ -103,6 +120,7 @@ function App() {
                 <Profile
                   onCardClick={handleCardClick}
                   clothingItems={clothingItems}
+                  handleAddClick={handleAddClick}
                 />
               }
             />
@@ -122,6 +140,7 @@ function App() {
             card={selectedCard}
             onClose={closeActiveModal}
             isOpen={activeModal === "preview"}
+            onCardDelete={handleDeleteCard}
           />
         )}
       </CurrentTemperatureUnitContext.Provider>

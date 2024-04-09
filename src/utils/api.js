@@ -17,8 +17,14 @@ class Api {
   addItem({ name, imageUrl, weather }) {
     return fetch(`${this.baseUrl}/items`, {
       method: "POST",
-      headers: this._headers,
+      headers: this.headers,
       body: JSON.stringify({ name, imageUrl, weather }),
+    }).then(this._checkResponse);
+  }
+  deleteClothingItem(id) {
+    return fetch(`${this.baseUrl}/items/${id}`, {
+      method: "DELETE",
+      headers: this.headers,
     }).then(this._checkResponse);
   }
 }

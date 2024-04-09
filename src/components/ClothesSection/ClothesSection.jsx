@@ -1,14 +1,16 @@
-import { defaultClothingItems } from "../../utils/constants";
 import ItemCard from "../ItemCard/ItemCard";
+import "./ClothesSection.css";
 
-const ClothesSection = ({ onCardClick, clothingItems }) => {
+const ClothesSection = ({ onCardClick, clothingItems, handleAddClick }) => {
   const profileCards = clothingItems ? clothingItems : [];
 
   return (
     <div className="clothes-section">
-      <div>
-        <p>Your items</p>
-        <button>Add New</button>
+      <div className="clothes-section-header">
+        <p className="clothes-section-text">Your items</p>
+        <button onClick={handleAddClick} className="clothes-section-button">
+          + Add New
+        </button>
       </div>
       <ul className="clothes-section__items">
         {profileCards.map((item) => {
