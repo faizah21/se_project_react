@@ -9,8 +9,8 @@ import { useEffect } from "react";
 import { getWeather, filterWeatherData } from "../../utils/weatherApi";
 import { coordinates, APIKey } from "../../utils/constants";
 import Footer from "../Footer/Footer";
-import { CurrentTemperatureUnitContext } from "../contexts/CurrentTemperatureUnitContext";
-import AddItemModal from "../../AddItemModal/AddItemModal";
+import { CurrentTemperatureUnitContext } from "../../contexts/CurrentTemperatureUnitContext";
+import AddItemModal from "../AddItemModal/AddItemModal";
 import Profile from "../Profile/Profile";
 import Api from "../../utils/api";
 
@@ -92,8 +92,6 @@ function App() {
       })
       .catch(console.error);
   }, []);
-
- 
 
   console.log(currentTemperatureUnit);
   return (
