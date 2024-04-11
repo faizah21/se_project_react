@@ -54,7 +54,7 @@ const AddItemModal = ({ closeActiveModal, onAddItem, isOpen }) => {
       </label>
       <fieldset className="modal__fieldset modal__ratio-buttons">
         <legend className="modal__legend">Select the weather type</legend>
-        <label htmlFor="Hot" className="modal__label modal__label_type_radio">
+        <label htmlFor="hot" className="modal__label modal__label_type_radio">
           <input
             id="hot"
             type="radio"
@@ -65,7 +65,7 @@ const AddItemModal = ({ closeActiveModal, onAddItem, isOpen }) => {
           />
           Hot
         </label>
-        <label htmlFor="Warm" className="modal__label modal__label_type_radio">
+        <label htmlFor="warm" className="modal__label modal__label_type_radio">
           <input
             id="warm"
             type="radio"
@@ -76,7 +76,7 @@ const AddItemModal = ({ closeActiveModal, onAddItem, isOpen }) => {
           />
           Warm
         </label>
-        <label htmlFor="Cold" className="modal__label modal__label_type_radio">
+        <label htmlFor="cold" className="modal__label modal__label_type_radio">
           <input
             id="cold"
             type="radio"

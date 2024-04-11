@@ -93,7 +93,20 @@ function App() {
       .catch(console.error);
   }, []);
 
-  console.log(currentTemperatureUnit);
+  useEffect(() => {
+    if (!activeModal) return;
+    
+    const handleEscClose = (e) => {
+      if (e.key === "Escape") {
+        closeActiveModal();
+      }
+    };
+    document.addEventListener("keydown", handleEscClose);
+    return () => {
+      document.removeEventListener("keydown", handleEscClose);
+    };
+  }, [activeModal]);
+
   return (
     <div className="page">
       <CurrentTemperatureUnitContext.Provider
@@ -126,21 +139,21 @@ function App() {
 
           <Footer />
         </div>
-        {activeModal === "add-garment" && (
+        {
           <AddItemModal
             closeActiveModal={closeActiveModal}
             isOpen={activeModal === "add-garment"}
             onAddItem={handleAddItemSubmit}
           />
-        )}
-        {activeModal === "preview" && (
+        }
+        {
           <ItemModal
             card={selectedCard}
             onClose={closeActiveModal}
             isOpen={activeModal === "preview"}
             onCardDelete={handleDeleteCard}
           />
-        )}
+        }
       </CurrentTemperatureUnitContext.Provider>
     </div>
   );
