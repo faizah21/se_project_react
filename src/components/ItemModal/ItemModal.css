@@ -2,39 +2,21 @@
   font-family: "Cabinet Grotesk";
   src: url("../../vendor/fonts/CabinetGrotesk-Bold.otf") format("opentype");
 }
-
-.modal__content_type_image {
-  padding: 0;
-  overflow: hidden;
-  width: 100%;
-}
-
-.modal__image {
-  width: 100%;
-  display: block;
+.modal__footer {
+  font-family: CabinetGrotesk;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0em;
+  text-align: left;
 }
 
 .modal__caption {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  font-family: "Cabinet Grotesk";
-  margin: 0;
-  padding: 20px 0 0 32px;
+  margin-bottom: 12px;
+  margin-left: 30px;
 }
 
 .modal__weather {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  font-family: "Cabinet Grotesk";
-  margin: 0;
-  padding: 12px 0 32px 32px;
-}
-
-@media screen and (max-width: 700px) {
-  .modal__container_type_image {
-    width: 343px;
-    height: 463px;
-  }
+  margin-left: 30px;
+  margin-top: -15px;
 }

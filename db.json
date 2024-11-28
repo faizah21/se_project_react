@@ -65,6 +65,21 @@
       "name": "Sweatshirt",
       "weather": "warm",
       "imageUrl": "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Sweatshirt.png?etag=008a9674757bea2e0bdb31242e364be0"
+    },
+    {
+      "_id": 16
+    },
+    {
+      "name": "demo",
+      "weather": "sunny",
+      "imageURL": "www.google.com",
+      "_id": 17
+    },
+    {
+      "name": "demo",
+      "weather": "sunny",
+      "imageURL": "www.google.com",
+      "_id": 18
     }
   ]
 }

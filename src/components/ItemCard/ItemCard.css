@@ -1,47 +1,70 @@
-@font-face {
-  font-family: "Cabinet Grotesk";
-  src: url("../../vendor/fonts/CabinetGrotesk-Bold.otf") format("opentype");
-}
-
 .card {
-  border-radius: 19px;
+  width: 328px;
   position: relative;
-  overflow: hidden;
   display: flex;
   justify-content: center;
-  width: 325px;
-  height: 328px;
-  border: 1px solid;
-  border-color: rgba(0, 0, 0, 0.3);
 }
 
-.card__image {
-  width: 100%;
-}
-
-.card__image:hover {
+.card:hover {
   cursor: pointer;
 }
 
 .card__name {
-  padding: 2px 12px;
-  position: absolute;
-  top: 15px;
   margin: 0;
-  background-color: #fff;
-  font-family: "Cabinet Grotesk";
+  top: 15px;
+  position: absolute;
+  font-family: "CabinetGrotesk";
   font-size: 16px;
-  line-height: 20px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.6);
-  white-space: nowrap;
+  line-height: 24px;
+  width: 85px;
+  height: 24px;
+  text-align: center;
+  background: rgba(255, 255, 255, 1);
   border-radius: 4px;
-  pointer-events: none;
+  color: rgba(0, 0, 0, 0.6);
 }
 
-@media screen and (max-width: 700px) {
-  .card {
-    width: 164px;
-    height: 164px;
-  }
+.card__image {
+  width: 328px;
+  border-radius: 20px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  height: 328px;
+  display: flex;
+  overflow: hidden;
+}
+
+.cards__text {
+  font-family: "CabinetGrotesk";
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24.8px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.card__like-button {
+  background-image: url("../../assets/Like.svg");
+  background-color: transparent;
+  border: none;
+  width: 18px;
+  height: 15px;
+  background-size: contain;
+  position: absolute;
+  top: 20px;
+  right: 75px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.card__like-button:hover {
+  opacity: 0.5;
+}
+
+.card__like-button_active {
+  background-image: url("../../assets/Like-active.svg");
 }

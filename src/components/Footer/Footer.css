@@ -1,25 +1,8 @@
-@font-face {
-  font-family: "Cabinet Grotesk";
-  src: url("../../vendor/fonts/CabinetGrotesk-Medium.otf") format("opentype");
-}
 .footer {
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 24px;
-}
-
-.footer__developer {
-  font-family: "Cabinet Grotesk";
-  font-weight: 500;
-  font-size: 16px;
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: left;
+  font-size: 14px;
   line-height: 20px;
-  margin: 0;
-}
-
-.footer__year {
-  font-family: "Cabinet Grotesk";
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 20px;
-  margin: 0;
+  font-family: "CabinetGrotesk";
 }

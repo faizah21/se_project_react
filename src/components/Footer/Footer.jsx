@@ -1,10 +1,11 @@
 import "./Footer.css";
-function Footer() {
+
+const Footer = () => {
   return (
-    <footer className="footer">
-      <p className="footer__developer">Developed by Faizah Ansar</p>
-      <p className="footer__year">{new Date().getFullYear()}</p>
+    <footer>
+      <p className="footer">Developed by Faizah Ansar. 2024</p>
     </footer>
   );
-}
+};
+
 export default Footer;
