@@ -1,9 +1,11 @@
 import React from "react";
-import { useState, useEffect, useMemo } from "react";
-import ModalWithForm from "../ModalWithForm/ModalWithForm";
-import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 import "./AddItemModal.css";
 
+import { useState, useEffect, useMemo } from "react";
+import ModalWithForm from "../ModalWithForm/ModalWithForm";
+import { useForm } from "../../hooks/useForm";
+
+import { CurrentUserContext } from "../../contexts/CurrentUserContext";
 const AddItemModal = ({
   onClose,
   onAddItem,
@@ -41,7 +43,8 @@ const AddItemModal = ({
       onClose={onClose}
       isOpen={isOpen}
       onSubmit={handleSubmit}
-      isLoading={isLoading}>
+      isLoading={isLoading}
+    >
       <label htmlFor="name3" className="modal__label">
         Name{" "}
         <input

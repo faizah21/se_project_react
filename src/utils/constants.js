@@ -115,3 +115,7 @@ export const coordinates = {
   longitude: -74.005974,
 };
 export const APIkey = "278ae1b8e4e4e6b9acc0ea52c5e7e53f";
+export const baseUrl =
+  process.env.NODE_ENV === "production"
+    ? "http://localhost:3001"
+    : "http://localhost:3001";
