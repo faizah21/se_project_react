@@ -1,1 +1,5 @@
-@import url(./vendor/normalize.css);
+@import url("./vendor/normalize.css");
+@font-face {
+  font-family: "Cabinet";
+  src: url("../src/vendor/fonts/CabinetGrotesk-Variable.ttf") format("truetype");
+}

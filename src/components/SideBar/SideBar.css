@@ -2,58 +2,47 @@
   font-family: "CabinetGrotesk";
   src: url("../../vendor/CabinetGrotesk-Medium.otf");
 }
-.sidebar__avatar {
+.sidebar {
+  margin-right: auto;
+}
+
+.sidebar__profile-image {
   width: 56px;
   height: 56px;
   border-radius: 50%;
+  margin-right: 16px;
+  object-fit: cover;
 }
 
-.sidebar__username {
-  width: 157px;
-  height: 25px;
-  line-height: 24.8px;
-  font-family: "CabinetGrotesk";
-  font-style: normal;
+.sidebar__profile-image_default {
+  border: 1px solid red;
+}
+
+.sidebar__profile-name {
+  margin: 0;
+  font-size: 20px;
   font-weight: 700;
-  font-size: 16px;
-  color: #000000;
-  margin-top: -45px;
-  margin-left: 70px;
+  line-height: 25px;
+  /* margin-left: 16px; */
 }
 
-.sidebar__buttons {
-  margin-top: 40px;
-  width: 157px;
-  height: 25px;
+.sidebar__profile-element {
+  display: flex;
+  align-items: center;
 }
 
-.sidebar__edit-profile-btn {
-  width: 157px;
-  height: 25px;
-  color: #000000;
-  font-family: "CabinetGrotesk";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 24.8px;
-  background-color: transparent;
+.sidebar__navigation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 24px;
+}
+
+.sidebar__button {
   border: none;
-  margin-left: -9px;
-  margin-bottom: 10px;
-  cursor: pointer;
-}
-
-.sidebar__log-out-btn {
-  width: 157px;
-  height: 25px;
-  color: #000000;
-  font-family: "CabinetGrotesk";
-  font-style: normal;
   font-weight: 700;
-  font-size: 16px;
-  line-height: 24.8px;
-  background-color: transparent;
-  border: none;
-  margin-left: -50px;
+  font-size: 20px;
+  line-height: 25px;
+  text-align: left;
+  margin-bottom: 8px;
   cursor: pointer;
 }

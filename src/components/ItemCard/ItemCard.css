@@ -1,70 +1,148 @@
 .card {
-  width: 328px;
+  list-style-type: none;
   position: relative;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  height: 326px;
+  width: 323px;
+  background-color: #e9e9e9;
+  border-radius: 19px;
   display: flex;
   justify-content: center;
-}
-
-.card:hover {
   cursor: pointer;
+  z-index: 1;
 }
 
-.card__name {
-  margin: 0;
-  top: 15px;
+.card__header {
   position: absolute;
-  font-family: "CabinetGrotesk";
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 24px;
-  width: 85px;
-  height: 24px;
-  text-align: center;
-  background: rgba(255, 255, 255, 1);
-  border-radius: 4px;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.card__heart {
+  border: none;
+  background-image: url("../../assets/like-button-unliked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: contain;
+  width: 18px;
+  height: 15px;
+  z-index: 2;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.card__heart_active {
+  border: none;
+  background-image: url("../../assets/like-button-liked.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: contain;
+  width: 18px;
+  height: 15px;
+  z-index: 2;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.card__title {
+  margin: 0;
+  display: flex;
   color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  padding: 2px 12px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.cards__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 323px);
+  gap: 21px;
+  padding: 0;
+  place-content: center;
+  margin: 0;
 }
 
 .card__image {
-  width: 328px;
-  border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.3);
-  height: 328px;
-  display: flex;
-  overflow: hidden;
+  width: 100%;
+  border-radius: 19px;
 }
 
 .cards__text {
-  font-family: "CabinetGrotesk";
-  font-size: 20px;
+  margin: 0;
   font-weight: 700;
-  line-height: 24.8px;
-  letter-spacing: 0em;
-  text-align: left;
+  font-size: 20px;
+  line-height: 25px;
+  margin-top: 40px;
+  margin-bottom: 34px;
 }
 
-.card__like-button {
-  background-image: url("../../assets/Like.svg");
-  background-color: transparent;
-  border: none;
-  width: 18px;
-  height: 15px;
-  background-size: contain;
-  position: absolute;
-  top: 20px;
-  right: 75px;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  border: none;
-  padding: 0;
-  border-radius: 2px;
-  transition: background-color 0.3s ease;
+.randomize {
+  display: none;
 }
 
-.card__like-button:hover {
-  opacity: 0.5;
+.cards {
+  padding-bottom: 85px;
 }
 
-.card__like-button_active {
-  background-image: url("../../assets/Like-active.svg");
+@media screen and (max-width: 707px) {
+  .cards__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .cards {
+    padding-bottom: 0;
+  }
+
+  .card {
+    /* flex-basis: 164px; */
+    height: 164px;
+    width: 164px;
+    /* flex-grow: 1; */
+  }
+
+  .card__image {
+    width: 164px;
+    height: 164px;
+  }
+
+  .cards__text {
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  .card__title {
+    top: 7px;
+  }
+
+  .randomize {
+    display: block;
+  }
+
+  .randomize__button {
+    background-color: black;
+    color: white;
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    margin-top: 20px;
+    height: 44px;
+    margin-bottom: 84px;
+  }
+
+  .randomize__text {
+    display: inline-block;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 20px;
+    margin-left: 8px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
 }

@@ -1,42 +1,34 @@
-import React, { useState, useContext } from "react";
-import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext";
-
+import { useContext } from "react";
 import "./ToggleSwitch.css";
+import CurrentTemperatureUnitContext from "../../contexts/CurrentTemperatureUnitContext/CurrentTemperatureUnitContext";
 
-const ToggleSwitch = () => {
-  const { currentTemperatureUnit, handleToggleSwitchChange } = useContext(
-    CurrentTemperatureUnitContext
-  );
+export default function ToggleSwitch() {
+  const currentTemperatureContext = useContext(CurrentTemperatureUnitContext);
+
+  function handleChange() {
+    currentTemperatureContext.handleToggleSwitchChange();
+  }
 
   return (
-    <label className="switch">
+    <>
       <input
-        className="toggle__switch-input switch__input"
+        className="checkbox__box"
+        onClick={handleChange}
         type="checkbox"
-        onChange={handleToggleSwitchChange}
-      />
-      <span
-        className={
-          currentTemperatureUnit === "F"
-            ? "switch__slider switch__slider-F"
-            : "switch__slider switch__slider-C"
+        name="toggle temperature"
+        onChange={handleChange}
+        checked={
+          currentTemperatureContext.currentTemperatureUnit === "F"
+            ? false
+            : true
         }
-      ></span>
-      <p
-        className={`switch__temp-F  ${
-          currentTemperatureUnit === "F" && "switch__active"
-        }`}
-      >
-        F
-      </p>
-      <p
-        className={`switch__temp-C  ${
-          currentTemperatureUnit === "C" && "switch__active"
-        }`}
-      >
-        C
-      </p>
-    </label>
+        id="toggleTemperature"
+      />
+      <label htmlFor="toggleTemperature" className="checkbox__label">
+        <span className="checkbox__letter checkbox__F">F</span>
+        <span className="checkbox__switch-button"></span>
+        <span className="checkbox__letter checkbox__C">C</span>
+      </label>
+    </>
   );
-};
-export default ToggleSwitch;
+}

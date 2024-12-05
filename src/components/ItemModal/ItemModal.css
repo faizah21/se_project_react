@@ -2,21 +2,85 @@
   font-family: "Cabinet Grotesk";
   src: url("../../vendor/fonts/CabinetGrotesk-Bold.otf") format("opentype");
 }
-.modal__footer {
-  font-family: CabinetGrotesk;
-  font-size: 16px;
+.modal__image {
+  object-fit: contain;
+  border-radius: 20px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.modal__content_type_preview {
+  padding: 0;
+}
+
+.modal__close-button {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 24px;
+  top: 24px;
+  cursor: pointer;
+  background-image: url("../../assets/modal-close-button.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  z-index: 11;
+}
+
+.modal__content-details {
+  padding-left: 32px;
+  position: relative;
+}
+
+.modal__content-title {
+  margin: 0;
+  font-size: 20px;
   font-weight: 700;
-  line-height: 20px;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
-.modal__caption {
+  line-height: 24px;
+  margin-top: 20px;
   margin-bottom: 12px;
-  margin-left: 30px;
 }
 
-.modal__weather {
-  margin-left: 30px;
-  margin-top: -15px;
+.modal__content-weather-type {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+
+.modal__content-delete-button {
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  padding: 0;
+  color: #ff4d00;
+  position: absolute;
+  top: 20px;
+  right: 32px;
+  cursor: pointer;
+}
+
+.modal__content-delete-button_hidden {
+  display: none;
+}
+
+@media screen and (max-width: 707px) {
+  .modal__content_type_preview {
+    max-width: 343px;
+  }
+
+  .modal__close-button {
+    top: 12px;
+    right: 12px;
+  }
+
+  .modal__content-delete-button {
+    right: 25px;
+  }
 }

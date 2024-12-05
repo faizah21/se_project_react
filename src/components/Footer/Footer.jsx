@@ -1,11 +1,10 @@
 import "./Footer.css";
 
-const Footer = () => {
+export default function Footer() {
   return (
-    <footer>
-      <p className="footer">Developed by Faizah Ansar. 2024</p>
+    <footer className="footer">
+      <p className="footer__details">Developed by Faizah Ansar </p>
+      <p className="footer__date">2024</p>
     </footer>
   );
-};
-
-export default Footer;
+}

@@ -1,0 +1,50 @@
+/* .Login__button {
+  background-image: url(../../assets/Login-Button.svg);
+  width: 73px;
+  height: 36px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  background-repeat: no-repeat;
+}
+
+.Login__button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0.8;
+}
+
+.Login__button:disabled {
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.Or-Sign-Up__button {
+  background-image: url(../../assets/Or-SignUp-Button.svg);
+  background-repeat: no-repeat;
+  width: 73px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  margin-left: 100px;
+  margin-top: -23px;
+}
+
+.modal__error {
+  color: red;
+  margin-top: -10px;
+  font-family: CabinetGrotesk;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 20px;
+} */
+
+.form__label_error {
+  color: #ff4d00;
+}
+
+.form__input_error {
+  color: #ff4d00;
+  border-bottom-color: #ff4d00;
+}

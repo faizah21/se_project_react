@@ -36,85 +36,89 @@ export const defaultClothingItems = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/wtwr-project/Coat.png?etag=298717ed89d5e40b1954a1831ae0bdd4",
   },
 ];
-
 export const weatherOptions = [
   {
     day: true,
-    condition: "Sunny",
-    url: new URL("../assets/Day/Sunny.png", import.meta.url).href,
-  },
-
-  {
-    day: false,
-    condition: "Sunny",
-    url: new URL("../assets/Night/Sunny.png", import.meta.url).href,
+    condition: "clear",
+    url: new URL("../assets/day/clear.svg", import.meta.url).href,
   },
   {
     day: true,
     condition: "clouds",
-    url: new URL("../assets/Day/Cloudy.png", import.meta.url).href,
+    url: new URL("../assets/day/clouds.svg", import.meta.url).href,
+  },
+  {
+    day: true,
+    condition: "fog",
+    url: new URL("../assets/day/fog.svg", import.meta.url).href,
+  },
+  {
+    day: true,
+    condition: "rain",
+    url: new URL("../assets/day/rain.svg", import.meta.url).href,
+  },
+  {
+    day: true,
+    condition: "snow",
+    url: new URL("../assets/day/snow.svg", import.meta.url).href,
+  },
+  {
+    day: true,
+    condition: "thunderstorm",
+    url: new URL("../assets/day/thunderstorm.svg", import.meta.url).href,
+  },
+  {
+    day: false,
+    condition: "clear",
+    url: new URL("../assets/night/clear.svg", import.meta.url).href,
   },
   {
     day: false,
     condition: "clouds",
-    url: new URL("../assets/Night/Cloudy.png", import.meta.url).href,
+    url: new URL("../assets/night/clouds.svg", import.meta.url).href,
   },
   {
-    day: true,
-    condition: "rain",
-    url: new URL("../assets/Day/Rain.png", import.meta.url).href,
+    day: false,
+    condition: "fog",
+    url: new URL("../assets/night/fog.svg", import.meta.url).href,
   },
   {
     day: false,
     condition: "rain",
-    url: new URL("../assets/Night/Rain.png", import.meta.url).href,
-  },
-  {
-    day: true,
-    condition: "Storm",
-    url: new URL("../assets/Day/Storm.png", import.meta.url).href,
-  },
-  {
-    day: false,
-    condition: "Storm",
-    url: new URL("../assets/Night/Storm.png", import.meta.url).href,
-  },
-  {
-    day: true,
-    condition: "snow",
-    url: new URL("../assets/Day/Snow.png", import.meta.url).href,
+    url: new URL("../assets/night/rain.svg", import.meta.url).href,
   },
   {
     day: false,
     condition: "snow",
-    url: new URL("../assets/Night/Snow.png", import.meta.url).href,
-  },
-  {
-    day: true,
-    condition: "Fog",
-    url: new URL("../assets/Day/Fog.png", import.meta.url).href,
+    url: new URL("../assets/night/snow.svg", import.meta.url).href,
   },
   {
     day: false,
-    condition: "Fog",
-    url: new URL("../assets/Night/Fog.png", import.meta.url).href,
+    condition: "thunderstorm",
+    url: new URL("../assets/night/thunderstorm.svg", import.meta.url).href,
   },
 ];
 
-export const defaultWeatherOptions = {
-  day: {
-    url: new URL("../assets/Day/Clear.png", import.meta.url).href,
+export const defaultWeatherOptions = [
+  {
+    day: true,
+    condition: "day",
+    url: new URL("../assets/day/default.svg", import.meta.url).href,
   },
-  night: {
-    url: new URL("../assets/Night/Night.png", import.meta.url).href,
+  {
+    day: false,
+    condition: "night",
+    url: new URL("../assets/night/default.svg", import.meta.url).href,
   },
-};
+];
 
-export const coordinates = {
+const staticCoordinates = {
   latitude: 40.712776,
   longitude: -74.005974,
 };
-export const APIkey = "278ae1b8e4e4e6b9acc0ea52c5e7e53f";
+export let coordinates = staticCoordinates;
+
+export const apiKey = "278ae1b8e4e4e6b9acc0ea52c5e7e53f";
 export const baseUrl =
   process.env.NODE_ENV === "production"
     ? "http://localhost:3001"

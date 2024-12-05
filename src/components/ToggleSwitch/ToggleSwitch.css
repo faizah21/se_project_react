@@ -1,62 +1,115 @@
-.switch {
-  display: flex;
+.checkbox__box {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+.checkbox__container {
+  height: 10px;
+  width: 20px;
   position: relative;
 }
 
-.toggle__switch-input {
-  margin-left: 680px;
-  border-radius: 25px;
-  border: 2px solid rgba(126, 126, 126, 1);
+.checkbox__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
   width: 56px;
   height: 28px;
-  appearance: none;
-  font-family: "CabinetGrotesk";
-  font-style: normal;
-  font-weight: 700;
-}
-
-.switch__slider {
+  background: white;
+  border: 2px solid #7e7e7e;
   border-radius: 20px;
-  width: 28px;
-  height: 28px;
+  position: relative;
+  transition: border 0.15s ease-in;
+}
+
+.checkbox__label:hover {
+  border: 2px solid black;
+}
+
+.checkbox__switch-button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
   background-color: black;
+  border-radius: 50%;
+  left: 0;
+  z-index: 0;
+  transition: width ease 0.2s, transform 0.3s ease;
+  mix-blend-mode: multiply;
+}
+
+.checkbox__box:hover + .checkbox__label > .checkbox__switch-button {
+  width: 32px;
+}
+
+.checkbox__box:checked + .checkbox__label > .checkbox__switch-button {
+  transform: translateX(90%);
+}
+
+.checkbox__box:checked:hover + .checkbox__label > .checkbox__switch-button {
+  width: 30px;
+}
+
+.checkbox__box:checked + .checkbox__label > .checkbox__switch-button::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 0;
+  height: 100%;
+  transition: 0.2s ease;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.checkbox__box:checked:hover
+  + .checkbox__label
+  > .checkbox__switch-button::before {
+  right: 2px;
+}
+
+.checkbox__box:checked + .checkbox__label > .checkbox__F {
+  color: black;
+}
+
+.checkbox__box:checked + .checkbox__label > .checkbox__C {
+  color: white;
+}
+
+.checkbox__letter {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
   text-align: center;
-  cursor: pointer;
-  position: absolute;
-  margin-left: 680px;
-  transition: 0.4s ease-in-out;
-}
-
-.switch__slider-F {
-  left: 0px;
-}
-
-.switch__slider-C {
-  left: 28px;
-}
-
-.switch__temp-C {
-  position: absolute;
-  top: -9px;
-  left: 35px;
-  line-height: 17.36px;
-  margin-left: 680px;
-  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  user-select: none;
   color: white;
-  font-family: "CabinetGrotesk";
-  font-style: normal;
-  font-weight: 700;
+  transition: color 0.3s ease;
 }
 
-.switch__temp-F {
+.checkbox__F {
   position: absolute;
-  top: -10px;
   left: 10px;
-  line-height: 17.36px;
-  margin-left: 680px;
-  color: white;
-  cursor: pointer;
-  font-family: "CabinetGrotesk";
-  font-style: normal;
-  font-weight: 700;
+}
+
+.checkbox__C {
+  position: absolute;
+  right: 8px;
+  color: black;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 800px) {
+  .checkbox__label {
+    /* border: 3px solid red; */
+    position: absolute;
+    right: 60px;
+    top: 5px;
+  }
 }

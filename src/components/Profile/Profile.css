@@ -1,14 +1,4 @@
 .profile {
   display: flex;
-  gap: 21px;
-}
-
-.profile__sidebar {
-  flex: 0 0 25%;
-}
-
-.profile__button-add {
-  width: 88px;
-  height: 25px;
-  background-color: transparent;
+  margin-top: 35px;
 }
