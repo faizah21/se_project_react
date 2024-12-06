@@ -44,7 +44,7 @@ export default function EditProfileModal({
       handleCloseModal={closeModal}
       handleSubmit={handleSubmit}
     >
-      <label htmlFor="name" className="form__label">
+      <label className="form__label">
         <p className="form__label-text">Name *</p>
         <input
           type="text"

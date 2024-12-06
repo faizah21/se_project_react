@@ -36,7 +36,6 @@ export default function LoginModal({
   function handleSubmit(e) {
     e.preventDefault();
     handleLogin(email, password);
-    resetInputs();
   }
 
   return (

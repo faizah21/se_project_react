@@ -13,9 +13,6 @@ export function register(email, password, name, avatar) {
     .then(() => {
       // immediately sign the user in
       signin(email, password);
-    })
-    .catch((err) => {
-      console.error(err);
     });
 }
 
