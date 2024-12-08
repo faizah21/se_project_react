@@ -28,9 +28,6 @@ export function signin(email, password) {
     .then((data) => {
       localStorage.setItem("jwt", data.token);
       return data;
-    })
-    .catch((err) => {
-      console.error(err);
     });
 }
 
