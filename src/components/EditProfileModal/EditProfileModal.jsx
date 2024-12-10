@@ -57,6 +57,7 @@ export default function EditProfileModal({
         <p className="form__label-text">Avatar *</p>
         <input
           type="url"
+          id="avatar"
           className="form__input"
           value={url}
           onChange={handleAvatarUrlChange}
